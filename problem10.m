@@ -3,17 +3,18 @@ clear,clc;
 
 %randomNum = randi(100);
 randomNum = 42;
-userGuess = sscanf(input("Enter guess: ","s"), "%d");
+userGuess = str2double(input("", "s"));
 %tries = 1;
 
 
 while (userGuess ~= randomNum)
 
     if (userGuess < randomNum)
-        userGuess = sscanf(input("Higher!\n ","s"), "%d");
+        fprintf("Higher!\n");
     elseif(userGuess > randomNum)
-        userGuess = sscanf(input("Lower!\n ","s"), "%d");
+        fprintf("Lower!\n");
     end
+    userGuess = str2double(input("","s"));
 %tries = tries + 1;
 end
 
