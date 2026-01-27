@@ -39,7 +39,7 @@ int main()
     getInclusive(grade, letterGrade);
 
     if (letterGrade[0] == 'F')
-        printf("%c\n", letterGrade[0]);
+        printf("Letter Grade: %c\n", letterGrade[0]);
     else
-        printf("Grade: %c%c\n", letterGrade[0], letterGrade[1]);
+        printf("Letter Grade: %c%c\n", letterGrade[0], letterGrade[1]);
 }
