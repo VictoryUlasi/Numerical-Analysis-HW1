@@ -29,6 +29,6 @@ b = input("Enter b: ");
 c = input("Enter c: "); 
 
 eq = [a,b,c];
-eq = transpose(eq)
+eq = transpose(eq);
 
 compute(eq);
