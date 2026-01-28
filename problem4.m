@@ -4,9 +4,12 @@ clear,clc;
 a = input("Enter side a: "); 
 b = input("Enter side b: "); 
 c = input("Enter side c: ");
-sides = transpose([a,b,c]);
-sides = sort(sides);
 
+sides = sort([a, b, c]);
+
+a = sides(1);
+b = sides(2);
+c = sides(3);
 
 if ((a + b > c) && (a + c >b) && (b + c >a))
 
@@ -19,10 +22,9 @@ if ((a + b > c) && (a + c >b) && (b + c >a))
     end
 
     sides = sides.^2;
-
-    a = sides(1,1);
-    b = sides(2,1);
-    c = sides(3,1);
+    a = sides(1);
+    b = sides(2);
+    c = sides(3);
 
     if ((a+b) == c)
         fprintf("right triangle.\n"); 
