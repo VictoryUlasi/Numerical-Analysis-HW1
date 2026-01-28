@@ -18,9 +18,11 @@ if ((a + b > c) && (a + c >b) && (b + c >a))
         fprintf("Scalene ");
     end
 
-    a = a^2;
-    b = b^2;
-    c = c^2;
+    sides = sides.^2;
+
+    a = sides(1,1);
+    b = sides(2,1);
+    c = sides(3,1);
 
     if ((a+b) == c)
         fprintf("right triangle.\n"); 
