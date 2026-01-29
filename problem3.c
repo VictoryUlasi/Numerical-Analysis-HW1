@@ -30,9 +30,6 @@ int classificationTest(float a, float b, float c)
 
 int angleTest(float a, float b, float c)
 {
-    if (a == b && c == sqrt(2) * a) // stupid floating point error on one test case in gradescope
-        return 1;
-
     a = pow(a, 2);
     b = pow(b, 2);
     c = pow(c, 2);
