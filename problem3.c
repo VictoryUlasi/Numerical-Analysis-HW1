@@ -35,7 +35,7 @@ int angleTest(float a, float b, float c)
     c = c*c;
 
     float difference = (a + b) - c;
-    float epsilon = 0.0000001;
+    float epsilon = 1e-4;
 
     if (fabs(difference) < epsilon)
         return 1; // Right Triangle

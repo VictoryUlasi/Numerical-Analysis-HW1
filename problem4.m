@@ -27,7 +27,7 @@ if ((a + b > c) && (a + c >b) && (b + c >a))
     c = c*c;
     difference = (a+b)-c;
 
-    if (abs(difference) < 1e-20 )
+    if (abs(difference) < 1e-4 )
         fprintf("right triangle.\n"); 
     elseif ((difference) > 0)
         fprintf("acute triangle.\n");
