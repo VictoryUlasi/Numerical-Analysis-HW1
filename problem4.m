@@ -21,16 +21,17 @@ if ((a + b > c) && (a + c >b) && (b + c >a))
         fprintf("Scalene ");
     end
 
-    sides = sides.^2;
-    a = sides(1);
-    b = sides(2);
-    c = sides(3);
+    
+    a = a*a;
+    b = b*b;
+    c = c*c;
+    difference = (a+b)-c;
 
-    if ((a+b) == c)
+    if (abs(difference) < 1e-20 )
         fprintf("right triangle.\n"); 
-    elseif ((a + b) > c)
+    elseif ((difference) > 0)
         fprintf("acute triangle.\n");
-    elseif ((a + b) < c)
+    else
         fprintf("obtuse triangle.\n");
     end
 else

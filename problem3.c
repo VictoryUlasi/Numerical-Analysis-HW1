@@ -30,18 +30,19 @@ int classificationTest(float a, float b, float c)
 
 int angleTest(float a, float b, float c)
 {
-    a = pow(a, 2);
-    b = pow(b, 2);
-    c = pow(c, 2);
+    a = a*a;
+    b = b*b;
+    c = c*c;
 
-    if ((a + b) == c)
+    float difference = (a + b) - c;
+    float epsilon = 0.0000001;
+
+    if (fabs(difference) < epsilon)
         return 1; // Right Triangle
-    else if ((a + b) > c)
+    else if ((difference) > 0)
         return 2; // Acute Triangle
-    else if ((a + b) < c)
+    else 
         return 3; // Obtuse Triangle
-    else
-        return 0; // Error
 }
 
 void sort(float *a, float *b, float *c) // a = x, b = y, c = z in my head
